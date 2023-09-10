@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <h1>login page</h1>
+    {% if messages %}
+    <ul class="messages">
+      {% for message in messages %}
+      <li>{{ message }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+    <form method="POST" action="">
+      {% csrf_token %}
+      <label>Username:</label>
+      <input type="text" name="username" placeholder="Enter Username" />
+      <label>Password:</label>
+      <input type="password" name="password" placeholder="Enter Password" />
+      <button type="Submit">Login</Login>
+    </form>
+  </body>
+</html>
